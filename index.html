@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mendez Cleaning - Future of Clean Spaces</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="container navbar">
+            <div class="logo">
+                <div class="logo-icon">✨</div>
+                Mendez Cleaning
+            </div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#about">About Us</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <button class="cta-button">Get a Quote</button>
+            <div class="mobile-menu-button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-links">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#about">About Us</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact</a>
+            <button class="cta-button">Get a Quote</button>
+        </div>
+    </div>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title"><span>Spotless</span> Spaces, <span>Exceptional</span> Service – Cleaning You Can <span>Trust!</span></h1>
+                <p class="hero-description">Experience the perfect clean with our professional residential and commercial cleaning services. Whether it’s your home or business, we deliver top-quality cleaning with attention to detail, reliability, and care. Let us create a fresh, healthy environment for you—because a cleaner space is a happier place!</p>
+                <button class="cta-button pulse">Schedule a Service</button>
+            </div>
+        </div>
+        <div class="hero-image"></div>
+    </section>
+    
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <!-- Residential Services -->
+                <div class="service-card" data-service="residential">
+                    <div class="service-icon">🏠</div>
+                    <h3 class="service-title">Residential Cleaning</h3>
+                    <p class="service-description">Transform your living space with our comprehensive home cleaning services, tailored to your unique needs.</p>
+                    <ul class="service-list">
+                        <li>Weekly Maintenance</li>
+                        <li>Bi-weekly Cleaning</li>
+                        <li>Monthly Deep Clean</li>
+                        <li>Move-in/Move-out Services</li>
+                    </ul>
+                    <button class="service-details-btn">Learn More</button>
+                </div>
+                
+                <!-- Commercial Services -->
+                <div class="service-card" data-service="commercial">
+                    <div class="service-icon">🏢</div>
+                    <h3 class="service-title">Commercial Cleaning</h3>
+                    <p class="service-description">Keep your business space pristine and professional with our specialized commercial cleaning solutions.</p>
+                    <ul class="service-list">
+                        <li>Office Spaces</li>
+                        <li>Retail Locations</li>
+                        <li>Medical Facilities</li>
+                        <li>Educational Institutions</li>
+                    </ul>
+                    <button class="service-details-btn">Learn More</button>
+                </div>
+                
+                <!-- Deep Cleaning -->
+                <div class="service-card" data-service="deep">
+                    <div class="service-icon">🔍</div>
+                    <h3 class="service-title">Deep Cleaning</h3>
+                    <p class="service-description">Our intensive deep cleaning service tackles built-up dirt and grime in hard-to-reach places.</p>
+                    <ul class="service-list">
+                        <li>Baseboards & Crown Moldings</li>
+                        <li>Behind & Under Appliances</li>
+                        <li>Window Tracks & Blinds</li>
+                        <li>Ceiling Fans & Light Fixtures</li>
+                    </ul>
+                    <button class="service-details-btn">Learn More</button>
+                </div>
+                
+                <!-- Post-Construction -->
+                <div class="service-card" data-service="construction">
+                    <div class="service-icon">🏗️</div>
+                    <h3 class="service-title">Post-Construction Cleanup</h3>
+                    <p class="service-description">Complete cleaning after renovation or construction projects, removing dust, debris, and construction residues.</p>
+                    <ul class="service-list">
+                        <li>Dust Removal</li>
+                        <li>Surface Cleaning</li>
+                        <li>Window & Glass Cleaning</li>
+                        <li>Floor Treatment</li>
+                    </ul>
+                    <button class="service-details-btn">Learn More</button>
+                </div>
+                
+                <!-- Specialized Cleaning -->
+                <div class="service-card" data-service="specialized">
+                    <div class="service-icon">⚡</div>
+                    <h3 class="service-title">Specialized Cleaning</h3>
+                    <p class="service-description">Targeted cleaning solutions for specific areas or items requiring special attention.</p>
+                    <ul class="service-list">
+                        <li>Carpet & Upholstery</li>
+                        <li>Tile & Grout Restoration</li>
+                        <li>Hardwood Floor Polishing</li>
+                        <li>Chandelier & Crystal Cleaning</li>
+                    </ul>
+                    <button class="service-details-btn">Learn More</button>
+                </div>
+                
+                <!-- Eco-Friendly Options -->
+                <div class="service-card" data-service="eco">
+                    <div class="service-icon">🌱</div>
+                    <h3 class="service-title">Eco-Friendly Cleaning</h3>
+                    <p class="service-description">Environmentally conscious cleaning using sustainable products and methods.</p>
+                    <ul class="service-list">
+                        <li>Non-Toxic Solutions</li>
+                        <li>Sustainable Practices</li>
+                        <li>Reduced Water Usage</li>
+                        <li>Minimal Environmental Impact</li>
+                    </ul>
+                    <button class="service-details-btn">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Service Modal -->
+    <div class="service-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <!-- Content will be dynamically inserted here -->
+            </div>
+            <button class="modal-cta">Request This Service</button>
+        </div>
+    </div>
+    
+    <!-- Featured Section -->
+    <section class="featured" id="about">
+        <div class="container">
+            <h2 class="section-title">Why Choose Mendez Cleaning</h2>
+            <div class="featured-content">
+                <!-- Advanced Technology -->
+                <div class="featured-item">
+                    <div class="featured-image"></div>
+                    <div class="featured-text">
+                        <h3 class="featured-title">Advanced Cleaning Technology</h3>
+                        <p class="featured-description">At Mendez Cleaning, we leverage cutting-edge technology and innovative methods to deliver superior results compared to traditional cleaning services.</p>
+                        <ul class="featured-list">
+                            <li class="featured-list-item">
+                                <span class="featured-list-icon">✓</span>
+                                HEPA filtration systems for allergen removal
+                            </li>
+                            <li class="featured-list-item">
+                                <span class="featured-list-icon">✓</span>
+                                UV-C sanitization technology
+                            </li>
+                            <li class="featured-list-item">
+                                <span class="featured-list-icon">✓</span>
+                                Advanced steam cleaning equipment
+                            </li>
+                            <li class="featured-list-item">
+                                <span class="featured-list-icon">✓</span>
+                                Smart scheduling and monitoring systems
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Eco-Friendly -->
+                <div class="featured-item">
+                    <div class="featured-image"></div>
+                    <div class="featured-text">
+                        <h3 class="featured-title">Eco-Conscious Approach</h3>
+                        <p class="featured-description">We're committed to protecting both your spaces and the environment with sustainable cleaning practices and environmentally friendly products.</p>
+                        <ul class="featured-list">
+                            <li class="featured-list-item">
+                                <span class="featured-list-icon">✓</span>
+                                Biodegradable cleaning solutions
+                            </li>
+                            <li class="featured-list-item">
+                                <span class="featured-list-icon">✓</span>
+                                Microfiber technology to reduce waste
+                            </li>
+                            <li class="featured-list-item">
+                                <span class="featured-list-icon">✓</span>
+                                Water-saving techniques
+                            </li>
+                            <li class="featured-list-item">
+                                <span class="featured-list-icon">✓</span>
+                                Energy-efficient equipment
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Trained Professionals -->
+                <div class="featured-item">
+                    <div class="featured-image"></div>
+                    <div class="featured-text">
+                        <h3 class="featured-title">Expert Cleaning Professionals</h3>
+                        <p class="featured-description">Our team consists of thoroughly vetted, trained, and certified cleaning specialists who take pride in delivering exceptional service.</p>
+                        <ul class="featured-list">
+                            <li class="featured-list-item">
+                                <span class="featured-list-icon">✓</span>
+                                Comprehensive background checks
+                            </li>
+                            <li class="featured-list-item">
+                                <span class="featured-list-icon">✓</span>
+                                Ongoing professional training
+                            </li>
+                            <li class="featured-list-item">
+                                <span class="featured-list-icon">✓</span>
+                                Industry certification
+                            </li>
+                            <li class="featured-list-item">
+                                <span class="featured-list-icon">✓</span>
+                                Quality assurance protocols
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="testimonial-controls">
+                <button class="testimonial-arrow testimonial-prev">&#10094;</button>
+                <button class="testimonial-arrow testimonial-next">&#10095;</button>
+            </div>
+            <div class="testimonial-cards">
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"Mendez Cleaning has transformed our office space. Their attention to detail and professional approach have made a significant difference in our workplace environment. Highly recommended!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"></div>
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>Office Manager, TechSolutions Inc.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"After trying several cleaning services, we finally found Mendez Cleaning. Their deep cleaning service is unmatched, and their eco-friendly approach aligns perfectly with our values."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"></div>
+                        <div class="author-info">
+                            <h4>Michael Chen</h4>
+                            <p>Homeowner</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"The post-construction cleanup by Mendez Cleaning was exceptional. They transformed a dusty, debris-filled space into a pristine environment ready for our grand opening."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"></div>
+                        <div class="author-info">
+                            <h4>Jessica Rodriguez</h4>
+                            <p>Restaurant Owner</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"We've been using Mendez Cleaning's weekly service for our medical facility for over a year. Their consistency, reliability, and strict adherence to sanitization protocols have been impressive."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"></div>
+                        <div class="author-info">
+                            <h4>Dr. James Wilson</h4>
+                            <p>Medical Director, HealthFirst Clinic</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3 class="contact-heading">Contact Information</h3>
+                    <p class="contact-text">Ready to experience the Mendez Cleaning difference? Reach out to us today for a free consultation and quote. Our customer service team is available to answer your questions and schedule your service.</p>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <span class="contact-icon">📱</span>
+                            <p>(555) 123-4567</p>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">✉️</span>
+                            <p>info@mendezcleaning.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <p>123 Clean Street, Suite 456<br>Sparkle City, SC 12345</p>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">🕒</span>
+                            <p>Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 4:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label class="form-label" for="name">Your Name</label>
+                            <input class="form-input" type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email Address</label>
+                            <input class="form-input" type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="phone">Phone Number</label>
+                            <input class="form-input" type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="service">Service Interested In</label>
+                            <select class="form-input" id="service" name="service">
+                                <option value="">Select a service</option>
+                                <option value="residential">Residential Cleaning</option>
+                                <option value="commercial">Commercial Cleaning</option>
+                                <option value="deep">Deep Cleaning</option>
+                                <option value="construction">Post-Construction Cleanup</option>
+                                <option value="specialized">Specialized Cleaning</option>
+                                <option value="eco">Eco-Friendly Cleaning</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="message">Message</label>
+                            <textarea class="form-textarea" id="message" name="message" rows="5"></textarea>
+                        </div>
+                        <button type="submit" class="cta-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div>
+                    <a href="#" class="footer-logo">Mendez Cleaning</a>
+                    <p class="footer-about">Transforming spaces with advanced cleaning solutions for homes and businesses. Experience the future of clean with Mendez Cleaning.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon">
+                            <span>f</span>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <span>in</span>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <span>ig</span>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <span>tw</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="footer-heading">Services</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="#services">Residential Cleaning</a></li>
+                        <li class="footer-link"><a href="#services">Commercial Cleaning</a></li>
+                        <li class="footer-link"><a href="#services">Deep Cleaning</a></li>
+                        <li class="footer-link"><a href="#services">Post-Construction</a></li>
+                        <li class="footer-link"><a href="#services">Specialized Cleaning</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="footer-heading">Company</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="#about">About Us</a></li>
+                        <li class="footer-link"><a href="#testimonials">Testimonials</a></li>
+                        <li class="footer-link"><a href="#">Careers</a></li>
+                        <li class="footer-link"><a href="#">Blog</a></li>
+                        <li class="footer-link"><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="footer-heading">Areas Served</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="#">Downtown</a></li>
+                        <li class="footer-link"><a href="#">Westside</a></li>
+                        <li class="footer-link"><a href="#">Northridge</a></li>
+                        <li class="footer-link"><a href="#">Eastpark</a></li>
+                        <li class="footer-link"><a href="#">South Harbor</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mendez Cleaning. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
