@@ -726,6 +726,45 @@ nav.scrolled {
     min-height: 120px;
 }
 
+/* Dropdown select styling */
+.form-input option {
+    background-color: var(--dark);
+    color: var(--light);
+    padding: 10px;
+}
+
+.form-input select {
+    cursor: pointer;
+}
+
+/* Style the select dropdown arrow on webkit browsers */
+.form-input[type="text"],
+.form-input[type="email"],
+.form-input[type="tel"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+select.form-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2300c2ff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 20px;
+    padding-right: 45px;
+    cursor: pointer;
+}
+
+/* Firefox specific dropdown styling */
+@-moz-document url-prefix() {
+    select.form-input {
+        padding-right: 45px;
+    }
+}
+
 /* Footer */
 footer {
     background-color: var(--dark);
