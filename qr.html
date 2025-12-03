@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator - Mendez Cleaning</title>
+    <style>
+        :root {
+            --primary: #00c2ff;
+            --secondary: #0043ff;
+            --dark: #050a30;
+            --light: #f0f8ff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--dark) 0%, #0a1854 100%);
+            color: var(--light);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .generator-container {
+            max-width: 600px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .subtitle {
+            color: rgba(240, 248, 255, 0.7);
+            margin-bottom: 30px;
+        }
+
+        .input-group {
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            color: var(--light);
+            font-size: 1rem;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        button {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 194, 255, 0.3);
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 194, 255, 0.5);
+        }
+
+        #qrcode-container {
+            margin-top: 30px;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            display: none;
+        }
+
+        #qrcode-container.show {
+            display: block;
+        }
+
+        .download-btn {
+            margin-top: 20px;
+            background: linear-gradient(45deg, #ff00c8, var(--secondary));
+        }
+
+        .instructions {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(0, 194, 255, 0.1);
+            border-radius: 10px;
+            text-align: left;
+        }
+
+        .instructions h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .instructions ol {
+            padding-left: 20px;
+            line-height: 1.8;
+        }
+
+        .instructions li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="generator-container">
+        <h1>🔗 QR Code Generator</h1>
+        <p class="subtitle">Generate a QR code for your digital business card</p>
+
+        <div class="input-group">
+            <label for="card-url">Digital Business Card URL:</label>
+            <input type="text" id="card-url" placeholder="https://yourdomain.com/card.html" value="">
+        </div>
+
+        <button onclick="generateQRCode()">Generate QR Code</button>
+
+        <div id="qrcode-container">
+            <div id="qrcode"></div>
+            <button class="download-btn" onclick="downloadQRCode()">Download QR Code</button>
+        </div>
+
+        <div class="instructions">
+            <h3>📱 How to Use:</h3>
+            <ol>
+                <li><strong>Get URL:</strong> Enter the full URL including https://</li>
+                <li><strong>Generate:</strong> Click "Generate QR Code" button</li>
+                <li><strong>Download:</strong> Download the QR code image</li>
+                <li><strong>Print:</strong> Add the QR code to your business cards</li>
+                <li><strong>For NFC:</strong> Use the same URL to program your NFC tags</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- QRCode.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    
+    <script>
+        let qrCodeInstance = null;
+
+        function generateQRCode() {
+            const url = document.getElementById('card-url').value;
+            
+            if (!url) {
+                alert('Please enter a URL for your digital business card');
+                return;
+            }
+
+            // Clear previous QR code if exists
+            const qrcodeDiv = document.getElementById('qrcode');
+            qrcodeDiv.innerHTML = '';
+
+            // Generate new QR code
+            qrCodeInstance = new QRCode(qrcodeDiv, {
+                text: url,
+                width: 300,
+                height: 300,
+                colorDark: "#050a30",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
+            });
+
+            // Show the QR code container
+            document.getElementById('qrcode-container').classList.add('show');
+        }
+
+        function downloadQRCode() {
+            const canvas = document.querySelector('#qrcode canvas');
+            if (canvas) {
+                const link = document.createElement('a');
+                link.download = 'mendez-cleaning-qrcode.png';
+                link.href = canvas.toDataURL();
+                link.click();
+            }
+        }
+
+        // Set default URL if you know it
+        window.addEventListener('DOMContentLoaded', function() {
+            // You can set a default URL here
+        });
+    </script>
+</body>
+</html>

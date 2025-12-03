@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mendez Cleaning - Contact</title>
+    <style>
+        :root {
+    --primary: #00c2ff;
+    --secondary: #0043ff;
+    --dark: #050a30;
+    --light: #f0f8ff;
+    --accent: #ff00c8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, var(--dark) 0%, #0a1854 100%);
+    color: var(--light);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Animated Background */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 50%, rgba(0, 194, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(255, 0, 200, 0.1) 0%, transparent 50%);
+    animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.splash-container {
+    position: relative;
+    z-index: 1;
+    max-width: 500px;
+    width: 90%;
+    padding: 40px;
+    text-align: center;
+    animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Logo Section */
+.logo-section {
+    margin-bottom: 40px;
+    animation: slideDown 0.8s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.logo-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rotate 3s linear infinite;
+    display: inline-block;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(180deg) scale(1.1);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+.company-name {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+}
+
+.tagline {
+    font-size: 1.1rem;
+    color: rgba(240, 248, 255, 0.7);
+    font-weight: 300;
+}
+
+/* Gallery Section */
+.gallery-section {
+    margin-bottom: 40px;
+    animation: scaleIn 0.8s ease-out 0.3s both;
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    aspect-ratio: 1;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    animation: fadeInUp 0.6s ease-out both;
+}
+
+.gallery-item:nth-child(1) {
+    animation-delay: 0.4s;
+}
+
+.gallery-item:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.gallery-item:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.gallery-item:nth-child(4) {
+    animation-delay: 0.7s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.gallery-item p {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: white;
+}
+
+/* Loading Section */
+.loading-section {
+    margin-bottom: 30px;
+    animation: fadeIn 0.8s ease-out 0.8s both;
+}
+
+.loading-text {
+    font-size: 1rem;
+    color: rgba(240, 248, 255, 0.8);
+    margin-bottom: 15px;
+    animation: blink 1.5s ease-in-out infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+    background-size: 200% 100%;
+    border-radius: 10px;
+    animation: progressAnimation 3s ease-in-out forwards, gradientShift 2s ease-in-out infinite;
+    box-shadow: 0 0 10px rgba(0, 194, 255, 0.5);
+}
+
+@keyframes progressAnimation {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 200% 0%;
+    }
+}
+
+/* Contact Preview */
+.contact-preview {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 25px;
+    animation: fadeIn 0.8s ease-out 1s both;
+}
+
+.contact-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.contact-details h3 {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.contact-details p {
+    font-size: 0.95rem;
+    color: rgba(240, 248, 255, 0.8);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* Success Message */
+.success-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: rgba(0, 194, 255, 0.95);
+    color: white;
+    padding: 30px 50px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    animation: successPop 0.5s ease-out 2.8s forwards;
+}
+
+@keyframes successPop {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+    .splash-container {
+        padding: 30px 20px;
+    }
+
+    .logo-icon {
+        font-size: 3rem;
+    }
+
+    .company-name {
+        font-size: 2rem;
+    }
+
+    .tagline {
+        font-size: 0.95rem;
+    }
+
+    .gallery-grid {
+        gap: 10px;
+    }
+
+    .gallery-icon {
+        font-size: 2rem;
+    }
+
+    .gallery-item p {
+        font-size: 0.8rem;
+    }
+
+    .contact-details h3 {
+        font-size: 1.2rem;
+    }
+
+    .contact-details p {
+        font-size: 0.85rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="splash-container">
+        <!-- Logo Section -->
+        <div class="logo-section">
+            <!-- <div class="logo-icon">✨</div> -->
+            <img src="images/Logo.png" alt="Logo" style="width: 300px;">
+            <h1 class="company-name">Mendez Cleaning</h1>
+            <p class="tagline">Future of Clean Spaces</p>
+        </div>
+
+        <!-- Image Gallery -->
+        <!-- <div class="gallery-section">
+            <div class="gallery-grid">
+                <div class="gallery-item" style="background: linear-gradient(135deg, #00c2ff, #0043ff);">
+                    <div class="gallery-icon">🏠</div>
+                    <p>Residential</p>
+                </div>
+                <div class="gallery-item" style="background: linear-gradient(135deg, #0043ff, #ff00c8);">
+                    <div class="gallery-icon">🏢</div>
+                    <p>Commercial</p>
+                </div>
+                <div class="gallery-item" style="background: linear-gradient(135deg, #ff00c8, #00c2ff);">
+                    <div class="gallery-icon">✨</div>
+                    <p>Deep Clean</p>
+                </div>
+                <div class="gallery-item" style="background: linear-gradient(135deg, #00c2ff, #0043ff);">
+                    <div class="gallery-icon">🌱</div>
+                    <p>Eco-Friendly</p>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Loading Section -->
+        <div class="loading-section">
+            <p class="loading-text">Saving contact information...</p>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+
+        <!-- Contact Preview -->
+        <div class="contact-preview">
+            <div class="contact-icon">📱</div>
+            <div class="contact-details">
+                <h3>Mendez Cleaning</h3>
+                <p>📞 (402) 706-8144</p>
+                <p>✉️ info@mendezcleaning.com</p>
+                <p>🌐 www.mendezcleaningomaha.net</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Wait for the DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // vCard contact information
+    const vCardData = `BEGIN:VCARD
+VERSION:3.0
+FN:Mendez Cleaning
+ORG:Mendez Cleaning
+TEL;TYPE=WORK,VOICE:(402) 706-8144
+EMAIL;TYPE=WORK:info@mendezcleaning.com
+URL:https://www.mendezcleaningomaha.net
+ADR;TYPE=WORK:;;123 Street Name, Suite 456;Omaha;NE;12345;USA
+NOTE:Professional Residential and Commercial Cleaning Services - Spotless Spaces, Exceptional Service
+END:VCARD`;
+
+    // Function to download vCard
+    function downloadVCard() {
+        // Create a blob with the vCard data
+        const blob = new Blob([vCardData], { type: 'text/vcard;charset=utf-8' });
+        
+        // Create a download link
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = 'Mendez_Cleaning_Contact.vcf';
+        
+        // Trigger the download
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        
+        // Clean up the URL object
+        URL.revokeObjectURL(link.href);
+        
+        // Show success message
+        showSuccessMessage();
+    }
+
+    // Function to show success message
+    function showSuccessMessage() {
+        const message = document.createElement('div');
+        message.className = 'success-message';
+        message.textContent = '✓ Contact Saved!';
+        document.body.appendChild(message);
+        
+        // Remove message after animation
+        setTimeout(() => {
+            message.remove();
+        }, 3500);
+    }
+
+    // Function to redirect to main page
+    function redirectToMainPage() {
+        // Change 'index.html' to your actual main page URL
+        window.location.href = 'index.html';
+    }
+
+    // Timing sequence
+    setTimeout(() => {
+        // Download vCard after 3 seconds (when progress bar completes)
+        downloadVCard();
+        
+        // Redirect to main page after 3.5 seconds
+        setTimeout(() => {
+            redirectToMainPage();
+        }, 500);
+    }, 4000);
+
+    // Optional: Add click handler to contact preview for manual download
+    const contactPreview = document.querySelector('.contact-preview');
+    if (contactPreview) {
+        contactPreview.style.cursor = 'pointer';
+        contactPreview.addEventListener('click', function() {
+            downloadVCard();
+        });
+    }
+});
+    </script>
+</body>
+</html>
